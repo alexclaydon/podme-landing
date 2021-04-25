@@ -1,5 +1,5 @@
 {
-  "name": "pms-marketing",
+  "name": "pms-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^1.0.1",
     "@tailwindcss/typography": "^0.4.0",
+    "eslint": "^7.25.0",
     "next": "10.1.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
