@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -50,22 +52,26 @@ export default function Header() {
           <>
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
+                <span className="sr-only">Workflow</span>
+                <Link href="/">
                   <img
                     className="h-8 w-auto sm:h-10"
                     src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
+
               <div className="-mr-2 -my-2 md:hidden">
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open menu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
+
+              {/* Navigation bar contents */}
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
+                {/* Leading "dropdown" button */}
                 <Popover className="relative">
                   {({ open }) => (
                     <>
@@ -131,24 +137,26 @@ export default function Header() {
                   )}
                 </Popover>
 
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Pricing
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Partners
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Company
-                </a>
+                {/* Other navigation buttons */}
+                <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                </div>
+
+                <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <Link href="/pricing">
+                    <a>Pricing</a>
+                  </Link>
+                </div>
+
+                <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <Link href="/contact">
+                    <a>Contact</a>
+                  </Link>
+                </div>
+
+                {/* Sign in / Sign up buttons */}
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
@@ -222,24 +230,23 @@ export default function Header() {
                   </div>
                   <div className="py-6 px-5">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
-                      >
-                        Pricing
-                      </a>
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
-                      >
-                        Partners
-                      </a>
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
-                      >
-                        Company
-                      </a>
+                      <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/">
+                          <a>Home</a>
+                        </Link>
+                      </div>
+
+                      <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/pricing">
+                          <a>Pricing</a>
+                        </Link>
+                      </div>
+
+                      <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/contact">
+                          <a>Contact</a>
+                        </Link>
+                      </div>
                     </div>
                     <div className="mt-6">
                       <a
