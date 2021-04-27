@@ -156,6 +156,12 @@ export default function Header() {
                   </Link>
                 </div>
 
+                <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <Link href="/generic">
+                    <a>Generic</a>
+                  </Link>
+                </div>
+
                 {/* Sign in / Sign up buttons */}
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -245,6 +251,12 @@ export default function Header() {
                       <div className="text-base font-medium text-gray-500 hover:text-gray-900">
                         <Link href="/contact">
                           <a>Contact</a>
+                        </Link>
+                      </div>
+
+                      <div className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/generic">
+                          <a>Generic</a>
                         </Link>
                       </div>
                     </div>
