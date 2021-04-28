@@ -58,7 +58,7 @@ export default function Newsletter() {
             <div className="relative">
               <div className="sm:text-center">
                 <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                  Get notified when we&rsquo;re launching.
+                  Get notified when we launch.
                 </h2>
                 <p className="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
                   We're currently in closed beta, but please let us know your email address if you'd
