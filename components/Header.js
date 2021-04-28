@@ -1,48 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import {
-  AnnotationIcon,
-  ChatAlt2Icon,
-  InboxIcon,
-  MenuIcon,
-  QuestionMarkCircleIcon,
-  XIcon,
-} from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-
-const solutions = [
-  {
-    name: "Inbox",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: InboxIcon,
-  },
-  {
-    name: "Messaging",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: AnnotationIcon,
-  },
-  {
-    name: "Live Chat",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
-    icon: ChatAlt2Icon,
-  },
-  {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
-    icon: QuestionMarkCircleIcon,
-  },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 export default function Header() {
   return (
@@ -69,75 +29,10 @@ export default function Header() {
                 </Popover.Button>
               </div>
 
-              {/* Navigation bar contents */}
+              {/* Navigation bar */}
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                {/* Leading "dropdown" button */}
-                <Popover className="relative">
-                  {({ open }) => (
-                    <>
-                      <Popover.Button
-                        className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        )}
-                      >
-                        <span>Solutions</span>
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </Popover.Button>
-
-                      <Transition
-                        show={open}
-                        as={Fragment}
-                        enter="transition ease-out duration-200"
-                        enterFrom="opacity-0 translate-y-1"
-                        enterTo="opacity-100 translate-y-0"
-                        leave="transition ease-in duration-150"
-                        leaveFrom="opacity-100 translate-y-0"
-                        leaveTo="opacity-0 translate-y-1"
-                      >
-                        <Popover.Panel
-                          static
-                          className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                        >
-                          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                            <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                              {solutions.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                                >
-                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
-                                    <item.icon
-                                      className="h-6 w-6"
-                                      aria-hidden="true"
-                                    />
-                                  </div>
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">
-                                      {item.name}
-                                    </p>
-                                    <p className="mt-1 text-sm text-gray-500">
-                                      {item.description}
-                                    </p>
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-                        </Popover.Panel>
-                      </Transition>
-                    </>
-                  )}
-                </Popover>
-
-                {/* Other navigation buttons */}
+                
+                {/* Navigation buttons */}
                 <div className="text-base font-medium text-gray-500 hover:text-gray-900">
                   <Link href="/">
                     <a>Home</a>
@@ -162,7 +57,7 @@ export default function Header() {
                   </Link>
                 </div>
 
-                {/* Sign in / Sign up buttons */}
+              {/* Sign in / Sign up buttons */}
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
@@ -211,27 +106,6 @@ export default function Header() {
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                       </div>
-                    </div>
-                    <div className="mt-6">
-                      <nav className="grid grid-cols-1 gap-7">
-                        {solutions.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                          >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                              <item.icon
-                                className="h-6 w-6"
-                                aria-hidden="true"
-                              />
-                            </div>
-                            <div className="ml-4 text-base font-medium text-gray-900">
-                              {item.name}
-                            </div>
-                          </a>
-                        ))}
-                      </nav>
                     </div>
                   </div>
                   <div className="py-6 px-5">
@@ -282,5 +156,5 @@ export default function Header() {
         )}
       </Popover>
     </header>
-  );
+  )
 }
