@@ -1,96 +1,102 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 import {
-  ChatAltIcon,
-  DocumentReportIcon,
   HeartIcon,
-  InboxIcon,
-  PencilAltIcon,
-  ReplyIcon,
-  SparklesIcon,
-  TrashIcon,
   UsersIcon,
-} from "@heroicons/react/outline";
+  VideoCameraIcon,
+  ShieldCheckIcon,
+  DocumentTextIcon,
+  // BookmarkIcon,
+  ClockIcon,
+  CheckIcon,
+  LinkIcon,
+} from '@heroicons/react/outline'
 
 const features = [
   {
-    name: "Unlimited Inboxes",
+    name: 'Fast, stable video calls',
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: InboxIcon,
+      'Connection is the entire point of telehealth; we prioritised the speed and stability of our video calls in our design process.',
+    icon: VideoCameraIcon,
   },
   {
-    name: "Manage Team Members",
+    name: 'Private and secure',
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      'Video calls are end-to-end encrypted. and our software undergoes regular third party security audits.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Stable, shareable room links',
+    description:
+      'Never again confuse your patients with constantly-changing room links. We provide a customisable room link that stays the same - session after session. Your clients will always know where to find you. Brand your room links with your full practice and practitioner name.',
+    icon: LinkIcon,
+    // #TODO: Alternatively, BookmarkIcon?
+  },
+  {
+    name: 'Waiting rooms',
+    description:
+      'Display custom text content to your waiting patients - either on a practitioner or practice-wide basis. You have complete control over who can enter your room and the ability to remove participants.',
+    icon: ClockIcon,
+  },
+  {
+    name: 'Streamlined interface',
+    description:
+      'We prioritise the simplicity, stability and speed of your experience as a practitioner, and that of your patients.',
+    icon: HeartIcon,
+  },
+  {
+    name: 'Perfect for teams',
+    description:
+      'Manage and pay for a team of practitioners in one place. Freely nominate additional practice admins to take the burden out of practice administration.',
     icon: UsersIcon,
   },
   {
-    name: "Spam Report",
+    name: 'Post-session survey integration',
+    description: 'Know how you and your clients are developing.',
+    icon: DocumentTextIcon,
+  },
+  {
+    name: 'Simple, clear pricing',
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: TrashIcon,
+      'Simple pricing for both solo practitioners and teams, that includes all of our features.',
+    icon: CheckIcon,
   },
   {
-    name: "Compose in Markdown",
+    name: 'Contantly improving',
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: PencilAltIcon,
+      "We're always building.  Future integrations will include: Stripe billing and Medipass medicare rebate integration - all without leaving your video session; secure communications and document sharing; network building.",
+    icon: CheckIcon,
   },
-  {
-    name: "Team Reporting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: DocumentReportIcon,
-  },
-  {
-    name: "Saved Replies",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ReplyIcon,
-  },
-  {
-    name: "Email Commenting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ChatAltIcon,
-  },
-  {
-    name: "Connect with Customers",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: HeartIcon,
-  },
-];
-const metrics = [
-  {
-    id: 1,
-    stat: "8K+",
-    emphasis: "Companies",
-    rest: "use laoreet amet lacus nibh integer quis.",
-  },
-  {
-    id: 2,
-    stat: "25K+",
-    emphasis: "Countries around the globe",
-    rest: "lacus nibh integer quis.",
-  },
-  {
-    id: 3,
-    stat: "98%",
-    emphasis: "Customer satisfaction",
-    rest: "laoreet amet lacus nibh integer quis.",
-  },
-  {
-    id: 4,
-    stat: "12M+",
-    emphasis: "Issues resolved",
-    rest: "lacus nibh integer quis.",
-  },
-];
+]
+// const metrics = [
+//   {
+//     id: 1,
+//     stat: '>500',
+//     emphasis: 'Sessions',
+//     rest: 'completed in beta to optimise the platform.',
+//   },
+//   {
+//     id: 2,
+//     stat: '99%',
+//     emphasis: 'Client',
+//     rest: 'satisfaction.',
+//   },
+//   {
+//     id: 3,
+//     stat: '1',
+//     emphasis: 'Link',
+//     rest: 'stable over time.',
+//   },
+//   {
+//     id: 4,
+//     stat: '$10',
+//     emphasis: 'Issues resolved',
+//     rest: 'lacus nibh integer quis.',
+//   },
+// ]
 
 export default function Home() {
   return (
@@ -117,22 +123,16 @@ export default function Home() {
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700"
-                    style={{ mixBlendMode: "multiply" }}
+                    style={{ mixBlendMode: 'multiply' }}
                   />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">
-                      Take control of your
-                    </span>
-                    <span className="block text-indigo-200">
-                      customer support
-                    </span>
+                    <span className="block text-white">Remote practice management</span>
+                    <span className="block text-indigo-200">you can trust</span>
                   </h1>
                   <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                    occaecat fugiat aliqua.
+                    Secure, fast and reliable video calling for health practitioners.
                   </p>
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                     <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -155,8 +155,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Logo Cloud */}
-          <div className="bg-gray-100">
+          {/* #TODO: Logo Cloud - Disabled for MVP but specific users to be added in time for production launch. */}
+          {/* <div className="bg-gray-100">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
               <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
                 Trusted by over 5 very average small businesses
@@ -199,7 +199,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Alternating Feature Sections */}
           <div className="relative pt-16 pb-32 overflow-hidden">
@@ -213,22 +213,17 @@ export default function Home() {
                   <div>
                     <div>
                       <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        <InboxIcon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
-                        />
+                        <VideoCameraIcon className="h-6 w-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
                       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        Stay on top of customer support
+                        Video calling you can rely on
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        Semper curabitur ullamcorper posuere nunc sed. Ornare
-                        iaculis bibendum malesuada faucibus lacinia porttitor.
-                        Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                        arcu pretium pharetra at. Lectus viverra dui tellus
-                        ornare pharetra.
+                        Don't settle for a sub-par video calling experience. Our end-to-end
+                        encrypted, low latency video calling ensures that your conversations with
+                        your patients ae as good as an in-person appointment.
                       </p>
                       <div className="mt-6">
                         <a
@@ -244,9 +239,8 @@ export default function Home() {
                     <blockquote>
                       <div>
                         <p className="text-base text-gray-500">
-                          &ldquo;Cras velit quis eros eget rhoncus lacus
-                          ultrices sed diam. Sit orci risus aenean curabitur
-                          donec aliquet. Mi venenatis in euismod ut.&rdquo;
+                          &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci
+                          risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
                         </p>
                       </div>
                       <footer className="mt-3">
@@ -283,22 +277,18 @@ export default function Home() {
                   <div>
                     <div>
                       <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        <SparklesIcon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
-                        />
+                        <LinkIcon className="h-6 w-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
                       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        Better understand your customers
+                        Stable, shareable room links
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        Semper curabitur ullamcorper posuere nunc sed. Ornare
-                        iaculis bibendum malesuada faucibus lacinia porttitor.
-                        Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                        arcu pretium pharetra at. Lectus viverra dui tellus
-                        ornare pharetra.
+                        You don't keep more than one physical office - why change your video call
+                        link for each session? With Poddle, your customisable room link stays the
+                        same, session after session. Your clients will always know where to find
+                        you.
                       </p>
                       <div className="mt-6">
                         <a
@@ -328,31 +318,24 @@ export default function Home() {
           <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
             <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white tracking-tight">
-                Inbox support built for efficiency
+                A practice management tool that meets you where you are.
               </h2>
               <p className="mt-4 max-w-3xl text-lg text-purple-200">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-                Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod
-                mattis in.
+                Designed by practitioners for practitioners. We provide an integrated toolset with
+                everything you need to manage your practice remotely - simply, conveniently and
+                reliably.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 {features.map((feature) => (
                   <div key={feature.name}>
                     <div>
                       <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                        <feature.icon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
-                        />
+                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
-                      <h3 className="text-lg font-medium text-white">
-                        {feature.name}
-                      </h3>
-                      <p className="mt-2 text-base text-purple-200">
-                        {feature.description}
-                      </p>
+                      <h3 className="text-lg font-medium text-white">{feature.name}</h3>
+                      <p className="mt-2 text-base text-purple-200">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -360,8 +343,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats section */}
-          <div className="relative bg-gray-900">
+          {/* #TODO: Stats section - currently hidden although may restore */}
+          {/* <div className="relative bg-gray-900">
             <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
               <div className="h-full w-full xl:grid xl:grid-cols-2">
                 <div className="h-full xl:relative xl:col-start-2">
@@ -388,30 +371,24 @@ export default function Home() {
                   Get actionable data that will help grow your business
                 </p>
                 <p className="mt-5 text-lg text-gray-300">
-                  Rhoncus sagittis risus arcu erat lectus bibendum. Ut in
-                  adipiscing quis in viverra tristique sem. Ornare feugiat
-                  viverra eleifend fusce orci in quis amet. Sit in et vitae
-                  tortor, massa. Dapibus laoreet amet lacus nibh integer quis.
-                  Eu vulputate diam sit tellus quis at.
+                  Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra
+                  tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et
+                  vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate
+                  diam sit tellus quis at.
                 </p>
                 <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                   {metrics.map((item) => (
                     <p key={item.id}>
-                      <span className="block text-2xl font-bold text-white">
-                        {item.stat}
-                      </span>
+                      <span className="block text-2xl font-bold text-white">{item.stat}</span>
                       <span className="mt-1 block text-base text-gray-300">
-                        <span className="font-medium text-white">
-                          {item.emphasis}
-                        </span>{" "}
-                        {item.rest}
+                        <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
                       </span>
                     </p>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* CTA Section */}
           <div className="bg-white">
@@ -443,5 +420,5 @@ export default function Home() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }
