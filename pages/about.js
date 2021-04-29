@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -7,18 +8,21 @@ const people = [
   {
     name: 'Remy Lindner',
     role: 'Co-Founder',
+    fileName: '/remy-lindner.jpg',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Sam Weily',
     role: 'Co-Founder',
+    fileName: '/sam-weily.jpg',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Alex Claydon',
     role: 'Co-Founder',
+    fileName: '/alex-claydon.jpg',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
@@ -54,11 +58,13 @@ export default function About() {
                       {people.map((person) => (
                         <li key={person.name}>
                           <div className="flex items-center space-x-4 lg:space-x-6">
-                            <img
+                            {/* #TODO: Use of `next/image` with Node 16 on Apple Silicon leads to a segfault (see [here](https://github.com/vercel/next.js/issues/24564) and [here](https://github.com/vercel/next.js/issues/24565); Image component temporarily disabled but to be re-enabled later.) */}
+                            {/* <Image
                               className="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                              src={person.imageUrl}
+                              src={person.fileName}
                               alt=""
-                            />
+                              layout="fill"
+                            /> */}
                             <div className="font-medium text-lg leading-6 space-y-1">
                               <h3>{person.name}</h3>
                               <p className="text-indigo-600">{person.role}</p>
@@ -83,29 +89,16 @@ export default function About() {
                     </h2>
                     <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
                       <div>
-                        <h3 className="text-lg leading-6 font-medium text-gray-900">Collaborate</h3>
-                        <dl className="mt-2 text-base text-gray-500">
-                          <div>
-                            <dt className="sr-only">Email</dt>
-                            <dd>support@example.com</dd>
-                          </div>
-                          <div className="mt-1">
-                            <dt className="sr-only">Phone number</dt>
-                            <dd>+1 (555) 123-4567</dd>
-                          </div>
-                        </dl>
-                      </div>
-                      <div>
                         <h3 className="text-lg leading-6 font-medium text-gray-900">Press</h3>
                         <dl className="mt-2 text-base text-gray-500">
                           <div>
                             <dt className="sr-only">Email</dt>
                             <dd>support@example.com</dd>
                           </div>
-                          <div className="mt-1">
+                          {/* <div className="mt-1">
                             <dt className="sr-only">Phone number</dt>
                             <dd>+1 (555) 123-4567</dd>
-                          </div>
+                          </div> */}
                         </dl>
                       </div>
                       <div>
@@ -117,23 +110,10 @@ export default function About() {
                             <dt className="sr-only">Email</dt>
                             <dd>support@example.com</dd>
                           </div>
-                          <div className="mt-1">
+                          {/* <div className="mt-1">
                             <dt className="sr-only">Phone number</dt>
                             <dd>+1 (555) 123-4567</dd>
-                          </div>
-                        </dl>
-                      </div>
-                      <div>
-                        <h3 className="text-lg leading-6 font-medium text-gray-900">Say hello</h3>
-                        <dl className="mt-2 text-base text-gray-500">
-                          <div>
-                            <dt className="sr-only">Email</dt>
-                            <dd>support@example.com</dd>
-                          </div>
-                          <div className="mt-1">
-                            <dt className="sr-only">Phone number</dt>
-                            <dd>+1 (555) 123-4567</dd>
-                          </div>
+                          </div> */}
                         </dl>
                       </div>
                     </div>

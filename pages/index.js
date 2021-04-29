@@ -14,6 +14,7 @@ import {
   ClockIcon,
   CheckIcon,
   LinkIcon,
+  CurrencyDollarIcon,
 } from '@heroicons/react/outline'
 
 const features = [
@@ -63,7 +64,7 @@ const features = [
     name: 'Simple, clear pricing',
     description:
       'Simple pricing for both solo practitioners and teams, that includes all of our features.',
-    icon: CheckIcon,
+    icon: CurrencyDollarIcon,
   },
   {
     name: 'Contantly improving',
@@ -103,7 +104,7 @@ export default function Home() {
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Poddle.</span>
+                    <span className="block text-white">Poddle</span>
                   </h1>
                   <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                     Secure, fast and reliable video calling for health practitioners.
@@ -137,14 +138,15 @@ export default function Home() {
                         encrypted, low latency video calling ensures that your conversations with
                         your patients ae as good as an in-person appointment.
                       </p>
-                      <div className="mt-6">
+                      {/* #TODO: Button to be reinstated once the full product launch happens - will take you to "Sign up" process. */}
+                      {/* <div className="mt-6">
                         <a
                           href="#"
                           className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                         >
                           Get started
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="mt-8 border-t border-gray-200 pt-6">
@@ -202,14 +204,15 @@ export default function Home() {
                         same, session after session. Your clients will always know where to find
                         you.
                       </p>
-                      <div className="mt-6">
+                      {/* #TODO: Button to be reinstated once the full product launch happens - will take you to "Sign up" process. */}
+                      {/* <div className="mt-6">
                         <a
                           href="#"
                           className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                         >
                           Get started
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

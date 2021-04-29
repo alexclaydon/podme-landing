@@ -151,13 +151,13 @@ export default function Contact() {
                         <dt>
                           <span className="sr-only">Phone number</span>
                         </dt>
-                        <dd className="flex text-base text-indigo-50">
+                        {/* <dd className="flex text-base text-indigo-50">
                           <PhoneIcon
                             className="flex-shrink-0 w-6 h-6 text-indigo-200"
                             aria-hidden="true"
                           />
                           <span className="ml-3">+1 (555) 123-4567</span>
-                        </dd>
+                        </dd> */}
                         <dt>
                           <span className="sr-only">Email</span>
                         </dt>
