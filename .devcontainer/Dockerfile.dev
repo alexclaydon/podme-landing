@@ -1,1 +1,1 @@
-FROM arm64v8/node:latest
+FROM --platform=arm64 node:latest
