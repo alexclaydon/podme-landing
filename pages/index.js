@@ -98,7 +98,7 @@ export default function Home() {
                     alt="People working on laptops"
                   />
                   <div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700"
+                    className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-400"
                     style={{ mixBlendMode: 'multiply' }}
                   />
                 </div>

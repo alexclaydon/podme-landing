@@ -88,7 +88,7 @@ export default function Pricing() {
                 </div>
                 <a
                   href="#"
-                  className="mt-8 w-full bg-blue-600 border border-transparent rounded-md py-3 px-5 inline-flex items-center justify-center text-base font-medium text-white hover:bg-blue-700 sm:mt-10 sm:w-auto xl:mt-0"
+                  className="mt-8 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 border border-transparent rounded-md py-3 px-5 inline-flex items-center justify-center text-base font-medium text-white sm:mt-10 sm:w-auto xl:mt-0"
                 >
                   Get started today
                 </a>
@@ -145,7 +145,7 @@ export default function Pricing() {
           </div>
 
           {/* Branded FAQ */}
-          <div className="bg-blue-900">
+          <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
               <div className="mt-6 border-t border-blue-400 border-opacity-25 pt-10">
