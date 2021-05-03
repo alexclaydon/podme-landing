@@ -27,7 +27,7 @@ const features = [
   {
     name: 'Private and secure',
     description:
-      'Video calls are end-to-end encrypted. and our software undergoes regular third party security audits.',
+      'Video calls are end-to-end encrypted. And our software undergoes regular third party security audits.',
     icon: ShieldCheckIcon,
   },
   {
@@ -136,7 +136,7 @@ export default function Home() {
                       <p className="mt-4 text-lg text-gray-500">
                         Don't settle for a sub-par video calling experience. Our end-to-end
                         encrypted, low latency video calling ensures that your conversations with
-                        your patients ae as good as an in-person appointment.
+                        your patients are as good as an in-person appointment.
                       </p>
                       {/* #TODO: Button to be reinstated once the full product launch happens - will take you to "Sign up" process. */}
                       {/* <div className="mt-6">
