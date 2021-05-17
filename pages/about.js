@@ -32,7 +32,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>Poddle - About</title>
+        <title>Podme - About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -49,8 +49,12 @@ export default function About() {
                       Meet our team
                     </h2>
                     <p className="text-xl text-gray-500">
-                      Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum
-                      enim vitae ullamcorper suspendisse. Vivamus fringilla.
+                      It’s no joke ... two psychologists and a lawyer walked into a telehealth room
+                      and noticed some short comings. Patchy video, privacy concerns plus constantly
+                      sending new session links formed the basis of our desire to create a simple,
+                      static, stable, secure way to connect. That’s how Podme was born. Podme takes
+                      the same simple approach to calendar integrations, session reminders and
+                      payments, without leaving your session.
                     </p>
                   </div>
                   <div className="lg:col-span-2">

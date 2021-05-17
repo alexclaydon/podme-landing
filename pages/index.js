@@ -18,67 +18,68 @@ import {
 } from '@heroicons/react/outline'
 
 const features = [
-  {
-    name: 'Fast, stable video calls',
-    description:
-      'Connection is the entire point of telehealth; we prioritised the speed and stability of our video calls in our design process.',
-    icon: VideoCameraIcon,
-  },
+  // {
+  //   name: 'Fast, stable video calls',
+  //   description:
+  //     'Connection is the entire point of telehealth; we prioritised the speed and stability of our video calls in our design process.',
+  //   icon: VideoCameraIcon,
+  // },
   {
     name: 'Private and secure',
     description:
-      'Video calls are end-to-end encrypted. And our software undergoes regular third party security audits.',
+      'Video calls on Podme are end-to-end encrypted. Our software undergoes regular third party security audits.',
     icon: ShieldCheckIcon,
   },
-  {
-    name: 'Stable, shareable room links',
-    description:
-      'Never again confuse your patients with constantly-changing room links. We provide a customisable room link that stays the same - session after session. Your clients will always know where to find you. Brand your room links with your full practice and practitioner name.',
-    icon: LinkIcon,
-    // #TODO: Alternatively, BookmarkIcon?
-  },
+  // {
+  //   name: 'Static, shareable room links',
+  //   description:
+  //     'Never again confuse your patients with constantly-changing room links. We provide a customisable room link that stays the same - session after session. Your clients will always know where to find you. Brand your room links with your full practice and practitioner name.',
+  //   icon: LinkIcon,
+  //   // #TODO: Alternatively, BookmarkIcon?
+  // },
   {
     name: 'Waiting rooms',
     description:
-      'Display custom text content to your waiting patients - either on a practitioner or practice-wide basis. You have complete control over who can enter your room and the ability to remove participants.',
+      'Display custom text content to your waiting clients - either as individual practitioners or whole practice. You have complete control over which clients can enter your room and the ability to remove them.',
     icon: ClockIcon,
   },
   {
     name: 'Streamlined interface',
     description:
-      'We prioritise the simplicity, stability and speed of your experience as a practitioner, and that of your patients.',
+      'We prioritise the simplicity, stability and speed of the telehealth experience. No bloatware, no ads, no fuss.',
     icon: HeartIcon,
   },
   {
     name: 'Perfect for teams',
     description:
-      'Manage and pay for a team of practitioners in one place. Freely nominate additional practice admins to take the burden out of practice administration.',
+      'Manage and pay for a team of practitioners in one place. Freely nominate additional practice administrators to remove the burden of practice management.',
     icon: UsersIcon,
   },
   {
     name: 'Post-session survey integration',
-    description: 'Know how you and your clients are developing.',
+    description:
+      'Know how you and your clients are developing.  Select pre and post-session surveys from our survey bank, or link your own.',
     icon: DocumentTextIcon,
   },
   {
     name: 'Simple, clear pricing',
     description:
-      'Simple pricing for both solo practitioners and teams, that includes all of our features.',
+      'Simple pricing for both solo practitioners and teams. One price includes all features.',
     icon: CurrencyDollarIcon,
   },
-  {
-    name: 'Contantly improving',
-    description:
-      "We're always building.  Future integrations will include: Stripe billing and Medipass medicare rebate integration - all without leaving your video session; secure communications and document sharing; network building.",
-    icon: CheckIcon,
-  },
+  // {
+  //   name: 'Contantly improving',
+  //   description:
+  //     "We're always building.  Future integrations will include: Stripe billing and Medipass medicare rebate integration - all without leaving your video session; secure communications and document sharing; network building.",
+  //   icon: CheckIcon,
+  // },
 ]
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Poddle - Welcome</title>
+        <title>Podme - Welcome</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -104,7 +105,7 @@ export default function Home() {
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Poddle</span>
+                    <span className="block text-white">Podme</span>
                   </h1>
                   <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                     Secure, fast and reliable video calling for health practitioners.
@@ -134,9 +135,9 @@ export default function Home() {
                         Video calling you can rely on
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        Don't settle for a sub-par video calling experience. Our end-to-end
-                        encrypted, low latency video calling ensures that your conversations with
-                        your patients are as good as an in-person appointment.
+                        We recognise privacy and connectivity are important. Our end-to-end
+                        encrypted, low latency video calling ensures conversations are as good as an
+                        in-person appointment ... with the door closed.
                       </p>
                       {/* #TODO: Button to be reinstated once the full product launch happens - will take you to "Sign up" process. */}
                       {/* <div className="mt-6">
@@ -196,13 +197,13 @@ export default function Home() {
                     </div>
                     <div className="mt-6">
                       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                        Stable, shareable room links
+                        Static, shareable room links
                       </h2>
                       <p className="mt-4 text-lg text-gray-500">
-                        You don't keep more than one physical office - why change your video call
-                        link for each session? With Poddle, your customisable room link stays the
-                        same, session after session. Your clients will always know where to find
-                        you.
+                        Never again confuse your clients with constantly-changing room links. With
+                        Podme, your customisable room link stays the same, session after session.
+                        Regular clients will always know where to find you, and you’ll find it easy
+                        to share your location with new clients.
                       </p>
                       {/* #TODO: Button to be reinstated once the full product launch happens - will take you to "Sign up" process. */}
                       {/* <div className="mt-6">
@@ -213,6 +214,31 @@ export default function Home() {
                           Get started
                         </a>
                       </div> */}
+                    </div>
+                    <div className="mt-8 border-t border-gray-200 pt-6">
+                      <blockquote>
+                        <div>
+                          <p className="text-base text-gray-500">
+                            &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit
+                            orci risus aenean curabitur donec aliquet. Mi venenatis in euismod
+                            ut.&rdquo;
+                          </p>
+                        </div>
+                        <footer className="mt-3">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex-shrink-0">
+                              <img
+                                className="h-6 w-6 rounded-full"
+                                src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                                alt=""
+                              />
+                            </div>
+                            <div className="text-base font-medium text-gray-700">
+                              Marcia Hill, Digital Marketing Manager
+                            </div>
+                          </div>
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
                 </div>
@@ -236,9 +262,11 @@ export default function Home() {
                 A practice management tool that meets you where you are.
               </h2>
               <p className="mt-4 max-w-3xl text-lg text-purple-200">
-                Designed by practitioners for practitioners. We provide an integrated toolset with
-                everything you need to manage your practice remotely - simply, conveniently and
-                reliably.
+                Designed by allied health practitioners with allied health practitioners and clients
+                in mind. Clients are seeking new and flexible ways to connect with their clinicians.
+                Podme provides the additional resources to simply and smoothly deliver - an
+                integrated toolset with everything you need to manage your practice remotely.
+                Simply, conveniently and reliably.
               </p>
               <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 {features.map((feature) => (

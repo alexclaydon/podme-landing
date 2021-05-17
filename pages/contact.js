@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div>
       <Head>
-        <title>Poddle - Contact</title>
+        <title>Podme - Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -26,8 +26,9 @@ export default function Contact() {
                   Get in touch
                 </h1>
                 <p className="mt-6 text-xl text-gray-500 max-w-3xl">
-                  Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non
-                  morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet consequat.
+                  We are working towards our launch date, and invite people to get in touch to find
+                  out more. We also like hearing from industry people, clients and those with a good
+                  story to share.
                 </p>
               </div>
             </div>
@@ -144,8 +145,8 @@ export default function Contact() {
                       </div>
                       <h3 className="text-lg font-medium text-white">Contact information</h3>
                       <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                        Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
-                        dictumst amet. Sapien tortor lacus arcu.
+                        If you like what you’ve seen and want to know more, drop us a message using
+                        this form.
                       </p>
                       <dl className="mt-8 space-y-6">
                         <dt>
@@ -161,13 +162,13 @@ export default function Contact() {
                         <dt>
                           <span className="sr-only">Email</span>
                         </dt>
-                        <dd className="flex text-base text-indigo-50">
+                        {/* <dd className="flex text-base text-indigo-50">
                           <MailIcon
                             className="flex-shrink-0 w-6 h-6 text-indigo-200"
                             aria-hidden="true"
                           />
                           <span className="ml-3">support@workcation.com</span>
-                        </dd>
+                        </dd> */}
                       </dl>
                     </div>
 

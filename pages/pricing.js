@@ -7,16 +7,16 @@ import LaunchNotify from '../components/LaunchNotify'
 import { CheckIcon } from '@heroicons/react/outline'
 
 const features = [
-  'Vitae in pulvinar odio id utobortis in inter.',
-  'Sed sed id viverra viverra augue eget massa.',
-  'Urna, gravida amet, a, integer venenatis.',
-  'Lobortis sed pharetra amet vitae eleifend.',
-  'Ullamcorper blandit a consequat donec elit aoreet.',
-  'Dolor quo assumenda.',
-  'Esse rerum distinctio maiores maiores.',
-  'Eos enim officiis ratione.',
-  'Tempore molestiae aliquid excepturi.',
-  'Perspiciatis eveniet inventore eum et aliquam.',
+  'End-to-end encrypted, low-latency video calling.',
+  'Connect easily with static, shareable room links.',
+  'Calendar integration for managing client appointments.',
+  'Medicare rebate integration.',
+  'Receive client payments in-session.',
+  'Unlimited client records.',
+  'Customisable waiting room content.',
+  'Access to psychometric testing resources.',
+  'Free administrative account for managing teams.',
+  'Add and manage team practitioners for a fixed fee of $10 per month per practitioner.',
 ]
 const faqs = [
   {
@@ -65,7 +65,7 @@ export default function Pricing() {
   return (
     <div>
       <Head>
-        <title>Poddle - Pricing</title>
+        <title>Podme - Pricing</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -80,10 +80,11 @@ export default function Pricing() {
                 <div>
                   <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
                     <span className="text-gray-900">Everything you need for </span>
-                    <span className="text-blue-600">$99 a month</span>
+                    <span className="text-blue-600">$10 a month</span>
+                    <span className="text-gray-900"> per practitioner</span>
                   </h1>
                   <p className="mt-5 text-xl text-gray-500">
-                    Includes every feature we offer plus unlimited projects and unlimited users.
+                    Includes every feature we offer for one fixed monthly price.
                   </p>
                 </div>
                 <a
@@ -144,8 +145,9 @@ export default function Pricing() {
             </div>
           </div>
 
+          {/* #TODO: We may reinstate the FAQ box at a later date in response to customer / beta feedback. */}
           {/* Branded FAQ */}
-          <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
+          {/* <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
               <div className="mt-6 border-t border-blue-400 border-opacity-25 pt-10">
@@ -159,7 +161,7 @@ export default function Pricing() {
                 </dl>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* #TODO: Email notification section: To be used to allow people to register during the beta period to receive notification of our public launch date; following public launch, to be replaced with `Trial` component */}
           <LaunchNotify />

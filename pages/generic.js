@@ -1,13 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 export default function Generic() {
   return (
     <div>
       <Head>
-        <title>Poddle - Generic</title>
+        <title>Podme - Generic</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -98,58 +98,46 @@ export default function Generic() {
                   <div className="lg:grid lg:grid-cols-2 lg:gap-6">
                     <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
                       <p>
-                        Ultrices ultricies a in odio consequat egestas rutrum.
-                        Ut vitae aliquam in ipsum. Duis nullam placerat cursus
-                        risus ultrices nisi, vitae tellus in. Qui non fugiat aut
-                        minus aut rerum. Perspiciatis iusto mollitia iste minima
+                        Ultrices ultricies a in odio consequat egestas rutrum. Ut vitae aliquam in
+                        ipsum. Duis nullam placerat cursus risus ultrices nisi, vitae tellus in. Qui
+                        non fugiat aut minus aut rerum. Perspiciatis iusto mollitia iste minima
                         soluta id.
                       </p>
                       <p>
-                        Erat pellentesque dictumst ligula porttitor risus eget
-                        et eget. Ultricies tellus felis id dignissim eget. Est
-                        augue <a href="#">maecenas</a> risus nulla ultrices
-                        congue nunc tortor. Eu leo risus porta integer
-                        suspendisse sed sit ligula elit.
+                        Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies
+                        tellus felis id dignissim eget. Est augue <a href="#">maecenas</a> risus
+                        nulla ultrices congue nunc tortor. Eu leo risus porta integer suspendisse
+                        sed sit ligula elit.
                       </p>
                       <ol>
-                        <li>
-                          Integer varius imperdiet sed interdum felis cras in
-                          nec nunc.
-                        </li>
-                        <li>
-                          Quam malesuada odio ut sit egestas. Elementum at porta
-                          vitae.
-                        </li>
+                        <li>Integer varius imperdiet sed interdum felis cras in nec nunc.</li>
+                        <li>Quam malesuada odio ut sit egestas. Elementum at porta vitae.</li>
                       </ol>
                       <p>
-                        Amet, eu nulla id molestie quis tortor. Auctor erat
-                        justo, sed pellentesque scelerisque interdum blandit
-                        lectus. Nec viverra amet ac facilisis vestibulum.
-                        Vestibulum purus nibh ac ultricies congue.
+                        Amet, eu nulla id molestie quis tortor. Auctor erat justo, sed pellentesque
+                        scelerisque interdum blandit lectus. Nec viverra amet ac facilisis
+                        vestibulum. Vestibulum purus nibh ac ultricies congue.
                       </p>
                     </div>
                     <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
                       <p>
-                        Erat pellentesque dictumst ligula porttitor risus eget
-                        et eget. Ultricies tellus felis id dignissim eget. Est
-                        augue maecenas risus nulla ultrices congue nunc tortor.
+                        Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies
+                        tellus felis id dignissim eget. Est augue maecenas risus nulla ultrices
+                        congue nunc tortor.
                       </p>
                       <p>
-                        Eu leo risus porta integer suspendisse sed sit ligula
-                        elit. Elit egestas lacinia sagittis pellentesque neque
-                        dignissim vulputate sodales. Diam sed mauris felis
-                        risus, ultricies mauris netus tincidunt. Mauris sit eu
-                        ac tellus nibh non eget sed accumsan. Viverra ac sed
-                        venenatis pulvinar elit. Cras diam quis tincidunt
-                        lectus. Non mi vitae, scelerisque felis nisi, netus amet
-                        nisl.
+                        Eu leo risus porta integer suspendisse sed sit ligula elit. Elit egestas
+                        lacinia sagittis pellentesque neque dignissim vulputate sodales. Diam sed
+                        mauris felis risus, ultricies mauris netus tincidunt. Mauris sit eu ac
+                        tellus nibh non eget sed accumsan. Viverra ac sed venenatis pulvinar elit.
+                        Cras diam quis tincidunt lectus. Non mi vitae, scelerisque felis nisi, netus
+                        amet nisl.
                       </p>
                       <p>
-                        Eu eu mauris bibendum scelerisque adipiscing et. Justo,
-                        elementum consectetur morbi eros, posuere ipsum tortor.
-                        Eget cursus massa sed velit feugiat sed ut. Faucibus
-                        eros mauris morbi aliquam nullam. Scelerisque elementum
-                        sit magna ullamcorper dignissim pretium.
+                        Eu eu mauris bibendum scelerisque adipiscing et. Justo, elementum
+                        consectetur morbi eros, posuere ipsum tortor. Eget cursus massa sed velit
+                        feugiat sed ut. Faucibus eros mauris morbi aliquam nullam. Scelerisque
+                        elementum sit magna ullamcorper dignissim pretium.
                       </p>
                     </div>
                   </div>
@@ -170,5 +158,5 @@ export default function Generic() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }
