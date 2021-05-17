@@ -75,7 +75,7 @@ export default function Pricing() {
         <main>
           <div className="bg-gradient-to-b from-blue-50 via-white to-white">
             {/* Pricing section with single price and feature list */}
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div className="px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8">
               <div className="pb-16 xl:flex xl:items-center xl:justify-between">
                 <div>
                   <h1 className="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
@@ -89,14 +89,14 @@ export default function Pricing() {
                 </div>
                 <a
                   href="#"
-                  className="mt-8 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 border border-transparent rounded-md py-3 px-5 inline-flex items-center justify-center text-base font-medium text-white sm:mt-10 sm:w-auto xl:mt-0"
+                  className="inline-flex items-center justify-center px-5 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md whitespace-nowrap bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 sm:mt-10 sm:w-auto xl:mt-0"
                 >
                   Get started today
                 </a>
               </div>
-              <div className="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
+              <div className="pt-16 border-t border-gray-200 xl:grid xl:grid-cols-3 xl:gap-x-8">
                 <div>
-                  <h2 className="text-base font-semibold text-blue-600 uppercase tracking-wide">
+                  <h2 className="text-base font-semibold tracking-wide text-blue-600 uppercase">
                     Everything you need
                   </h2>
                   <p className="mt-2 text-3xl font-extrabold text-gray-900">All-in-one platform</p>
@@ -105,41 +105,24 @@ export default function Pricing() {
                     adipiscing sagittis vel nulla nec. Urna, sed a lectus elementum blandit et.
                   </p>
                 </div>
-                <div className="mt-4 sm:mt-8 md:mt-10 md:grid md:grid-cols-2 md:gap-x-8 xl:mt-0 xl:col-span-2">
-                  <ul className="divide-y divide-gray-200">
-                    {features.slice(0, 5).map((feature, featureIdx) => (
+                <div className="mt-4 sm:mt-8 md:mt-10 xl:mt-0 xl:col-span-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5">
+                    {features.map((feature, featureIdx) => (
                       <li
                         key={feature}
                         className={classNames(
-                          featureIdx === 0 ? 'md:py-0 md:pb-4' : '',
-                          'py-4 flex'
+                          !featureIdx === 0 || !featureIdx === 5 ? 'md:py-0 md:pb-4' : '',
+                          'py-4 flex border-b border-gray-200'
                         )}
                       >
                         <CheckIcon
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
+                          className="flex-shrink-0 w-6 h-6 text-green-500"
                           aria-hidden="true"
                         />
                         <span className="ml-3 text-base text-gray-500">{feature}</span>
                       </li>
                     ))}
-                  </ul>
-                  <ul className="border-t border-gray-200 divide-y divide-gray-200 md:border-t-0">
-                    {features.slice(5).map((feature, featureIdx) => (
-                      <li
-                        key={feature}
-                        className={classNames(
-                          featureIdx === 0 ? 'md:border-t-0 md:py-0 md:pb-4' : '',
-                          'py-4 flex'
-                        )}
-                      >
-                        <CheckIcon
-                          className="flex-shrink-0 h-6 w-6 text-green-500"
-                          aria-hidden="true"
-                        />
-                        <span className="ml-3 text-base text-gray-500">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -148,13 +131,13 @@ export default function Pricing() {
           {/* #TODO: We may reinstate the FAQ box at a later date in response to customer / beta feedback. */}
           {/* Branded FAQ */}
           {/* <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div className="px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
-              <div className="mt-6 border-t border-blue-400 border-opacity-25 pt-10">
+              <div className="pt-10 mt-6 border-t border-blue-400 border-opacity-25">
                 <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
                   {faqs.map((item) => (
                     <div key={item.id}>
-                      <dt className="text-lg leading-6 font-medium text-white">{item.question}</dt>
+                      <dt className="text-lg font-medium leading-6 text-white">{item.question}</dt>
                       <dd className="mt-2 text-base text-blue-200">{item.answer}</dd>
                     </div>
                   ))}

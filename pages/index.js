@@ -89,25 +89,22 @@ export default function Home() {
         <main>
           {/* Hero section */}
           <div className="relative">
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div className="absolute inset-x-0 bottom-0 bg-gray-100 h-1/2" />
+            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 ">
                   <img
-                    className="h-full w-full object-cover"
+                    className="object-cover w-full h-full"
                     src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
                     alt="People working on laptops"
                   />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-400"
-                    style={{ mixBlendMode: 'multiply' }}
-                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 mix-blend-multiply" />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                  <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Podme</span>
+                  <h1 className="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl">
+                    <span className="block text-white filter drop-shadow-xl">Podme</span>
                   </h1>
-                  <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                  <p className="max-w-lg mx-auto mt-6 text-xl text-center text-indigo-200 sm:max-w-3xl filter drop-shadow-md">
                     Secure, fast and reliable video calling for health practitioners.
                   </p>
                 </div>
@@ -123,11 +120,11 @@ export default function Home() {
             />
             <div className="relative">
               <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-                <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                   <div>
                     <div>
-                      <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        <VideoCameraIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <span className="flex items-center justify-center w-12 h-12 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+                        <VideoCameraIcon className="w-6 h-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
@@ -143,14 +140,14 @@ export default function Home() {
                       {/* <div className="mt-6">
                         <a
                           href="#"
-                          className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                          className="inline-flex px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                         >
                           Get started
                         </a>
                       </div> */}
                     </div>
                   </div>
-                  <div className="mt-8 border-t border-gray-200 pt-6">
+                  <div className="pt-6 mt-8 border-t border-gray-200">
                     <blockquote>
                       <div>
                         <p className="text-base text-gray-500">
@@ -162,7 +159,7 @@ export default function Home() {
                         <div className="flex items-center space-x-3">
                           <div className="flex-shrink-0">
                             <img
-                              className="h-6 w-6 rounded-full"
+                              className="w-6 h-6 rounded-full"
                               src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                               alt=""
                             />
@@ -178,7 +175,7 @@ export default function Home() {
                 <div className="mt-12 sm:mt-16 lg:mt-0">
                   <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
-                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                      className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                       src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
                       alt="Inbox user interface"
                     />
@@ -188,11 +185,11 @@ export default function Home() {
             </div>
             <div className="mt-24">
               <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-                <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                   <div>
                     <div>
-                      <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                        <LinkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <span className="flex items-center justify-center w-12 h-12 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+                        <LinkIcon className="w-6 h-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
@@ -209,13 +206,13 @@ export default function Home() {
                       {/* <div className="mt-6">
                         <a
                           href="#"
-                          className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                          className="inline-flex px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                         >
                           Get started
                         </a>
                       </div> */}
                     </div>
-                    <div className="mt-8 border-t border-gray-200 pt-6">
+                    <div className="pt-6 mt-8 border-t border-gray-200">
                       <blockquote>
                         <div>
                           <p className="text-base text-gray-500">
@@ -228,7 +225,7 @@ export default function Home() {
                           <div className="flex items-center space-x-3">
                             <div className="flex-shrink-0">
                               <img
-                                className="h-6 w-6 rounded-full"
+                                className="w-6 h-6 rounded-full"
                                 src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
                                 alt=""
                               />
@@ -245,7 +242,7 @@ export default function Home() {
                 <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                   <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
-                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                      className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                       src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
                       alt="Customer profile user interface"
                     />
@@ -257,28 +254,30 @@ export default function Home() {
 
           {/* Gradient Feature Section */}
           <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
-            <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-              <h2 className="text-3xl font-extrabold text-white tracking-tight">
+            <div className="max-w-4xl px-4 py-16 mx-auto sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+              <h2 className="text-3xl font-extrabold tracking-tight text-white">
                 A practice management tool that meets you where you are.
               </h2>
-              <p className="mt-4 max-w-3xl text-lg text-purple-200">
+              <p className="max-w-3xl mt-4 text-lg text-purple-200 text-opacity-80">
                 Designed by allied health practitioners with allied health practitioners and clients
                 in mind. Clients are seeking new and flexible ways to connect with their clinicians.
                 Podme provides the additional resources to simply and smoothly deliver - an
                 integrated toolset with everything you need to manage your practice remotely.
                 Simply, conveniently and reliably.
               </p>
-              <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
+              <div className="grid grid-cols-1 mt-12 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
                 {features.map((feature) => (
                   <div key={feature.name}>
                     <div>
-                      <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
-                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <span className="flex items-center justify-center w-12 h-12 bg-white rounded-md bg-opacity-10">
+                        <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
                     <div className="mt-6">
                       <h3 className="text-lg font-medium text-white">{feature.name}</h3>
-                      <p className="mt-2 text-base text-purple-200">{feature.description}</p>
+                      <p className="mt-2 text-base text-purple-200 text-opacity-80">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 ))}
