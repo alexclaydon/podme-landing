@@ -42,7 +42,7 @@ export default function About() {
         <main>
           <section aria-labelledby="ourTeam">
             <div className="bg-white">
-              <div className="mx-auto py-6 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+              <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
                   <div className="space-y-5 sm:space-y-4">
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -69,7 +69,7 @@ export default function About() {
                               alt=""
                               layout="fill"
                             /> */}
-                            <div className="font-medium text-lg leading-6 space-y-1">
+                            <div className="space-y-1 text-lg font-medium leading-6">
                               <h3>{person.name}</h3>
                               <p className="text-indigo-600">{person.role}</p>
                             </div>
@@ -85,15 +85,15 @@ export default function About() {
 
           <section aria-labelledby="getInTouch">
             <div className="bg-white">
-              <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+              <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
                 <div className="divide-y-2 divide-gray-200">
                   <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                     <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
                       Get in touch
                     </h2>
-                    <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
+                    <div className="grid grid-cols-1 gap-12 mt-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
                       <div>
-                        <h3 className="text-lg leading-6 font-medium text-gray-900">Press</h3>
+                        <h3 className="text-lg font-medium leading-6 text-gray-900">Press</h3>
                         <dl className="mt-2 text-base text-gray-500">
                           <div>
                             <dt className="sr-only">Email</dt>
@@ -106,7 +106,7 @@ export default function About() {
                         </dl>
                       </div>
                       <div>
-                        <h3 className="text-lg leading-6 font-medium text-gray-900">
+                        <h3 className="text-lg font-medium leading-6 text-gray-900">
                           Join our team
                         </h3>
                         <dl className="mt-2 text-base text-gray-500">
