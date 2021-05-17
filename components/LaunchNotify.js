@@ -58,34 +58,47 @@ export default function Newsletter() {
             <div className="relative">
               <div className="sm:text-center">
                 <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                  Get notified when we launch.
+                  {process.env.prelaunch ? 'Get notified when we launch.' : 'Start your trial now'}
                 </h2>
                 <p className="max-w-2xl mx-auto mt-6 text-lg text-indigo-200 text-opacity-90">
-                  We're currently in closed beta, but please let us know your email address if you'd
-                  like us to contact you when we're publicly available.
+                  {process.env.prelaunch
+                    ? `We're currently in closed beta, but please let us know your email address if you'd
+                  like us to contact you when we're publicly available.`
+                    : ''}
                 </p>
               </div>
-              <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
-                <div className="flex-1 min-w-0">
-                  <label htmlFor="cta_email" className="sr-only">
-                    Email address
-                  </label>
-                  <input
-                    id="cta_email"
-                    type="email"
-                    className="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="mt-4 sm:mt-0 sm:ml-3">
-                  <button
-                    type="submit"
-                    className="block w-full px-5 py-3 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+              {process.env.prelaunch ? (
+                <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+                  <div className="flex-1 min-w-0">
+                    <label htmlFor="cta_email" className="sr-only">
+                      Email address
+                    </label>
+                    <input
+                      id="cta_email"
+                      type="email"
+                      className="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div className="mt-4 sm:mt-0 sm:ml-3">
+                    <button
+                      type="submit"
+                      className="block w-full px-5 py-3 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                    >
+                      Notify me
+                    </button>
+                  </div>
+                </form>
+              ) : (
+                <div className="flex w-full mx-auto mt-12 md:w-max">
+                  <a
+                    href="https://pms-web-staging.herokuapp.com/signup"
+                    className="block w-full px-5 py-3 text-base font-medium text-center text-white bg-indigo-500 border border-transparent rounded-md shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                   >
-                    Notify me
-                  </button>
+                    Get started
+                  </a>
                 </div>
-              </form>
+              )}
             </div>
           </div>
         </div>
