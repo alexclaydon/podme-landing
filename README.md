@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Live deploy
 
-A live deployment on Vercel is available for development purposes [here](https://poddle.vercel.app).
+A live deployment on Vercel is available for development purposes [here](https://podme.vercel.app).
 
 ## Getting Started
 
