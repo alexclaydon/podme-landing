@@ -5,29 +5,57 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LaunchNotify from '../components/LaunchNotify'
 
-import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { MailIcon, PhoneIcon, CheckIcon } from '@heroicons/react/outline'
+
+import { validateEmail, classNames } from '../utils'
 
 export default function Contact() {
-  const [form, setForm] = useState({});
+  const formDefaults = {first_name: "", last_name: "", email: "", phone: "", subject: "", message: "", status: null}
+  const [form, setForm] = useState(formDefaults)
 
   const handleFormChange = e => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+    setForm({ ...form, [e.target.name]: e.target.value, status: null })
   }
   
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    
+
     const isValidForm =
-      form.first_name.trim() === '' ||
-      form.last_name.trim() === '' ||
-      form.email.trim() === '' ||
-      form.subject.trim() === '' ||
-      form.message.trim() === ''
+      form?.first_name?.trim() === '' ||
+      form?.last_name?.trim() === '' ||
+      form?.email?.trim() === '' ||
+      form?.subject?.trim() === '' ||
+      form?.message?.trim() === '';
 
     if(isValidForm) {
       alert("Please fill all mandatory fields in the form")
       return 
     }
+
+    if(!validateEmail(form.email)) {
+      alert("Please enter valid email")
+      return 
+    }
+
+    if(form?.message?.length > 500) {
+      alert("Message cannot contain more than 500 characters")
+      return 
+    }
+
+    const message = {
+      to: form.email,
+      subject: form.subject,
+      text: form.phone ? `Phone: ${form.phone} \n\n ${form.message}` : form.message,
+    }
+
+    fetch(`/api/contact`, {
+      method: 'POST',
+      body: JSON.stringify(message)
+    })
+      .then(async () => {
+        setForm({...form, status: 'sending'});
+        setTimeout(() => setForm({...formDefaults, status: 'sent'}), 1500);
+      })
   }
 
   return (
@@ -215,6 +243,7 @@ export default function Contact() {
                               type="text"
                               name="first_name"
                               id="first_name"
+                              value={form.first_name}
                               onChange={handleFormChange}
                               autoComplete="given-name"
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -233,6 +262,7 @@ export default function Contact() {
                               type="text"
                               name="last_name"
                               id="last_name"
+                              value={form.last_name}
                               onChange={handleFormChange}
                               autoComplete="family-name"
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -251,6 +281,7 @@ export default function Contact() {
                               id="email"
                               name="email"
                               type="email"
+                              value={form.email}
                               onChange={handleFormChange}
                               autoComplete="email"
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -278,6 +309,7 @@ export default function Contact() {
                               autoComplete="tel"
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                               aria-describedby="phone-optional"
+                              value={form.phone}
                             />
                           </div>
                         </div>
@@ -294,6 +326,7 @@ export default function Contact() {
                               name="subject"
                               id="subject"
                               onChange={handleFormChange}
+                              value={form.subject}
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                             />
                           </div>
@@ -318,18 +351,30 @@ export default function Contact() {
                               rows={4}
                               className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                               aria-describedby="message-max"
-                              defaultValue={''}
+                              value={form.message}
                             />
                           </div>
                         </div>
-                        <div className="sm:col-span-2 sm:flex sm:justify-end">
+                        <div className="items-center mt-2 sm:flex-row-reverse sm:col-span-2 sm:flex sm:justify-between">
                           <button
                             onClick={handleSubmit}
                             type="submit"
-                            className="inline-flex items-center justify-center w-full px-4 py-2 mt-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                            className={classNames(
+                              'inline-flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm  focus:outline-none  sm:w-auto',
+                              form.status === 'sending'
+                                ? 'pointer-events-none cursor-not-allowed bg-gray-300 text-gray-500 opacity-50'
+                                : 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                            )}
                           >
-                            Submit
+                            {form.status === 'sending' ? 'Sending...' : 'Submit'}
                           </button>
+                          {form.status === "sent" && <div className="flex items-center justify-center mt-4 font-medium text-green-500 sm:mt-0">
+                            <CheckIcon
+                              className="flex-shrink-0 w-6 h-6 mr-1 text-green-500"
+                              aria-hidden="true"
+                            />
+                            Message sent successfully
+                          </div>}
                         </div>
                       </form>
                     </div>
