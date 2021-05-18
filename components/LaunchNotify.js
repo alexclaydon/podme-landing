@@ -1,4 +1,25 @@
+import {useState} from "react";
+import {validateEmail} from "../utils";
+
 export default function Newsletter() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = e => {
+    e.preventDefault();
+
+    if(!validateEmail(email)) {
+      alert("Email address is not valid");
+      return
+    }
+
+    fetch('/api/subscribe', {
+      method: 'POST',
+      body: JSON.stringify(email)
+    }).then(() => {
+      console.log("Subscribed")
+    })
+  }
+
   return (
     <div className="py-8 bg-white sm:py-4">
       <div className="relative sm:py-16">
@@ -68,7 +89,7 @@ export default function Newsletter() {
                 </p>
               </div>
               {process.env.prelaunch ? (
-                <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+                <form className="mt-12 sm:mx-auto sm:max-w-lg sm:flex" onSubmit={handleSubscribe}>
                   <div className="flex-1 min-w-0">
                     <label htmlFor="cta_email" className="sr-only">
                       Email address
@@ -76,12 +97,16 @@ export default function Newsletter() {
                     <input
                       id="cta_email"
                       type="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                       placeholder="Enter your email"
                     />
                   </div>
                   <div className="mt-4 sm:mt-0 sm:ml-3">
                     <button
+                      onClick={handleSubscribe}
                       type="submit"
                       className="block w-full px-5 py-3 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
                     >
