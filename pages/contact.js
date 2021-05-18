@@ -62,7 +62,6 @@ export default function Contact() {
     <div>
       <Head>
         <title>Podme - Contact</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="min-h-screen bg-white">

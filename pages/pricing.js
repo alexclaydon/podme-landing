@@ -64,7 +64,6 @@ export default function Pricing() {
     <div>
       <Head>
         <title>Podme - Pricing</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="bg-white">
