@@ -6,14 +6,19 @@ let apiInstance = new SibApiV3Sdk.ContactsApi()
 
 export default function handler(req, res) {
   let createContact = new SibApiV3Sdk.CreateContact()
-  createContact.email = JSON.parse(req.body);
+  createContact.email = req?.query?.email;
 
-  apiInstance.createContact(createContact).then((data) => {
-    res.end('Submitted successfully')
-  }, (error) => {
-    console.error(error);
-    res.end(error)
+  return new Promise(async (resolve, reject) => {
+    apiInstance.createContact(createContact).then(
+      (response) => {
+        res.status(200).end(JSON.stringify(response))
+        resolve();
+      },
+      (error) => {
+        res.status(400).end(JSON.stringify(error))
+        return resolve();
+      }
+    )
   });
-
-  res.end()
+  
 }
