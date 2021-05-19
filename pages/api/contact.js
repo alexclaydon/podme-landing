@@ -11,7 +11,6 @@ export default function handler(req, res) {
       res.end("Submitted successfully");
     })
     .catch((error) => {
-      console.error(error)
       res.end("Error submitting form");
     })
 
