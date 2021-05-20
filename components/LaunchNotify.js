@@ -1,4 +1,37 @@
+import {useState} from "react";
+import {validateEmail, classNames} from "../utils";
+
+import { CheckIcon } from '@heroicons/react/outline'
+
 export default function Newsletter() {
+  const [form, setForm] = useState({email: "", status: null});
+
+  const handleSubscribe = async e => {
+    e.preventDefault();
+
+    if(!validateEmail(form.email)) {
+      alert("Email address is not valid");
+      return
+    }
+
+    setForm({...form, status: "sending"});
+
+    fetch(`/api/subscribe?email=${form.email}`).then(async (res) => {
+      const result = await res.json()
+      if (result?.status === 400) {
+        const parseError = JSON.parse(result.response.text)
+        setForm({ ...form, status: null })
+        alert(parseError.message)
+        return
+      }
+
+      setForm({ ...form, status: 'sent' })
+      setTimeout(() => {
+        setForm({ ...form, status: null })
+      }, 1500)
+    })
+  }
+
   return (
     <div className="py-8 bg-white sm:py-4">
       <div className="relative sm:py-16">
@@ -68,7 +101,7 @@ export default function Newsletter() {
                 </p>
               </div>
               {process.env.prelaunch ? (
-                <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+                <form className="mt-12 sm:mx-auto sm:max-w-lg sm:flex" onSubmit={handleSubscribe}>
                   <div className="flex-1 min-w-0">
                     <label htmlFor="cta_email" className="sr-only">
                       Email address
@@ -76,16 +109,37 @@ export default function Newsletter() {
                     <input
                       id="cta_email"
                       type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600"
                       placeholder="Enter your email"
                     />
                   </div>
                   <div className="mt-4 sm:mt-0 sm:ml-3">
                     <button
+                      onClick={handleSubscribe}
                       type="submit"
-                      className="block w-full px-5 py-3 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:px-10"
+                      className={classNames(
+                        'block w-full px-5 py-3 text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 sm:px-10 border border-transparent',
+                        form.status === 'sent'
+                          ? 'pointer-events-none cursor-not-allowed bg-green-200 text-green-600'
+                          : form.status === 'sending'
+                          ? 'pointer-events-none cursor-not-allowed opacity-70 bg-indigo-500'
+                          : 'bg-indigo-500 shadow hover:bg-indigo-400 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600'
+                      )}
                     >
-                      Notify me
+                      {form.status === 'sent' ? (
+                        <span className="flex items-center">
+                          <CheckIcon
+                            className="flex-shrink-0 w-6 h-6 text-green-600"
+                            aria-hidden="true"
+                          />
+                          Subscribed
+                        </span>
+                      ) : (
+                        <span>{form.status === "sending" ? "Subscribing..." : "Notify me"}</span>
+                      )}
                     </button>
                   </div>
                 </form>

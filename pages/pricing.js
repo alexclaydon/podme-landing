@@ -6,6 +6,8 @@ import LaunchNotify from '../components/LaunchNotify'
 
 import { CheckIcon } from '@heroicons/react/outline'
 
+import {classNames} from "../utils";
+
 const features = [
   'End-to-end encrypted, low-latency video calling.',
   'Connect easily with static, shareable room links.',
@@ -57,16 +59,11 @@ const faqs = [
   },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Pricing() {
   return (
     <div>
       <Head>
         <title>Podme - Pricing</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="bg-white">
