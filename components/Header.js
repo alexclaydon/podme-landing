@@ -65,24 +65,24 @@ export default function Header() {
                 {/* Sign in / Sign up buttons */}
               </Popover.Group>
               <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-                {process.env.prelaunch ? (
-                  ''
-                ) : (
-                  <>
-                    <a
-                      href="https://pms-web-staging.herokuapp.com/login"
-                      className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
-                    >
-                      Sign in
-                    </a>
+                <>
+                  <a
+                    href="https://pms-web-staging.herokuapp.com/login"
+                    className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
+                  >
+                    Sign in
+                  </a>
+                  {process.env.prelaunch ? (
+                    ''
+                  ) : (
                     <a
                       href="https://pms-web-staging.herokuapp.com/signup"
                       className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm whitespace-nowrap bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                     >
                       Sign up
                     </a>
-                  </>
-                )}
+                  )}
+                </>
               </div>
             </div>
 
@@ -151,23 +151,27 @@ export default function Header() {
                         </Link>
                       </div> */}
                     </div>
-                    {process.env.prelaunch ? "" : <div className="mt-6">
-                      <a
-                        href="https://pms-web-staging.herokuapp.com/signup"
-                        className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                      >
-                        Sign up
-                      </a>
-                      <p className="mt-6 text-base font-medium text-center text-gray-500">
-                        Existing customer?{' '}
-                        <a
-                          href="https://pms-web-staging.herokuapp.com/login"
-                          className="text-gray-900"
-                        >
-                          Sign in
-                        </a>
-                      </p>
-                    </div>}
+                      <div className="mt-6">
+                        {process.env.prelaunch ? (
+                          ''
+                        ) : (
+                          <a
+                            href="https://pms-web-staging.herokuapp.com/signup"
+                            className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                          >
+                            Sign up
+                          </a>
+                        )}
+                        <p className="mt-6 text-base font-medium text-center text-gray-500">
+                          Existing customer?{' '}
+                          <a
+                            href="https://pms-web-staging.herokuapp.com/login"
+                            className="text-gray-900"
+                          >
+                            Sign in
+                          </a>
+                        </p>
+                      </div>
                   </div>
                 </div>
               </Popover.Panel>
