@@ -67,7 +67,7 @@ export default function Header() {
               <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
                 <>
                   <a
-                    href="https://pms-web-staging.herokuapp.com/login"
+                    href="https://app.podme.io/login"
                     className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
                   >
                     Sign in
@@ -76,7 +76,7 @@ export default function Header() {
                     ''
                   ) : (
                     <a
-                      href="https://pms-web-staging.herokuapp.com/signup"
+                      href="https://app.podme.io/signup"
                       className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm whitespace-nowrap bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                     >
                       Sign up
@@ -156,7 +156,7 @@ export default function Header() {
                           ''
                         ) : (
                           <a
-                            href="https://pms-web-staging.herokuapp.com/signup"
+                            href="https://app.podme.io/signup"
                             className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                           >
                             Sign up
@@ -165,7 +165,7 @@ export default function Header() {
                         <p className="mt-6 text-base font-medium text-center text-gray-500">
                           Existing customer?{' '}
                           <a
-                            href="https://pms-web-staging.herokuapp.com/login"
+                            href="https://app.podme.io/login"
                             className="text-gray-900"
                           >
                             Sign in
