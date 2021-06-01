@@ -85,7 +85,7 @@ export default function Pricing() {
                   </p>
                 </div>
                 {process.env.prelaunch ? "" : <a
-                  href="https://pms-web-staging.herokuapp.com/signup"
+                  href="https://app.podme.io/signup"
                   className="inline-flex items-center justify-center px-5 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md whitespace-nowrap bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 sm:mt-10 sm:w-auto xl:mt-0"
                 >
                   Get started today
